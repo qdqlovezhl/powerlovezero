@@ -1,30 +1,216 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <title>山河无恙</title>
-  <style>
-    div{
-      border-style:blue;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代科技企业 - 首页</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 英雄区域 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #4b5563;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: var(--secondary-color);
+        }
+
+        /* 功能卡片 */
+        .features {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 1rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
-<body> 
-  <div>
- <a href="231.html" align=""center>231.html</a>
-    
-  </div>
- <h1 align="center"><font face="华文彩云"  color="red">山河永固</font></h1>
- <hr color="bule" align="center" size="3" width="600像素"/> 
- <h2 align="center"><font color="black">花开牡丹</font></h2>
- <h3 align="center"><font color="red"><i>长城守望</i></font></h3>
- <hr color="pink" width="50%" size="1" align="center">
- <h4 align="center"><font color="green">血月临空</font></h4> 
- <p align="center"><font color="red" size="9">身之所向<br/>心之所往</font></p > 
- 
-</body>
-  
-<h3 align="center"><font color="orange">清澈的爱只为中国</font></h3>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">TechVision</a>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#services">服务</a>
+                <a href="#about">关于我们</a>
+                <a href="#contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>引领数字未来</h1>
+                    <p>通过创新技术解决方案推动企业数字化转型，助力您的业务持续增长</p>
+                    <a href="#contact" class="cta-button">立即咨询</a>
+                </div>
+                <div class="hero-image">
+                    <!-- 此处可以添加图片 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能模块 -->
+        <section class="features" id="services">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>云端解决方案</h3>
+                    <p>基于云计算的弹性扩展架构，满足不同规模企业的业务需求</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>数据安全</h3>
+                    <p>多层加密防护体系，保障企业核心数据资产安全</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>智能分析</h3>
+                    <p>AI驱动的数据分析平台，提供深度业务洞察</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body><h3 align="center"><font color="orange">清澈的爱只为中国</font></h3>
 <div class="digitalClock"></div>
 <script>
 var clock =document.querySelector(".digitalClock");
@@ -43,3 +229,7 @@ setInterval(showTime,1000)
 </script>   
 
 </html>
+
+  
+
+
